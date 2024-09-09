@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .info-card {
+            border: 1px solid #010a13;
+            /* box-shadow: 5px 5px rgb(72, 93, 102); */
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+            background-color:white;
+        }
+        h2{
+            color: rgb(54, 128, 232);
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container" id="infoContainer">
+        <!-- Info will be displayed here -->
+    </div>
+
+    <script>
+        window.onload = function() {
+            const buttonId = localStorage.getItem('buttonId');
+            let info = '';
+
+            switch (parseInt(buttonId, 10)) {
+                case 1:
+                    info = `
+                        <div class="info-card">
+                            <h2> पोलीस स्टेशन</h2>
+                             <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+
+                        </div>
+                    
+                    `;
+                    break;
+                case 2:
+                    info = `
+                       <div class="info-card">
+                            <h2>ग्रामीण रुग्णालय</h2>
+                    
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                      <div class="info-card">
+                            <h2>गुरांचा डॉक्टर/ वैद्य</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                        <div class="info-card">
+                            <h2>ग्रामीण रुग्णालय उपकेंद्र</h2>
+
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                         <div class="info-card">
+                            <h2>चिखली रुग्णालय</h2>
+
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                       <div class="info-card">
+                            <h2>Blood Bank Requirement</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                    
+                    `;
+                    break;
+                case 3:
+                    info = `
+                        <div class="info-card">
+                            <h2>पंचायत समिती</h2>
+                            <p>अधिकाऱ्याचे नाव: सोहन</p>
+                            <p>संपर्क: 9876543212</p>
+                        </div>
+                        <div class="info-card">
+                            <h2>कृषी अधिकारी</h2>
+                            <p>अधिकाऱ्याचे नाव: रमेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                        <div class="info-card">
+                            <h2>महाबीज</h2>
+                            <p>अधिकाऱ्याचे नाव: जगदीश</p>
+                            <p>संपर्क: 9876543214</p>
+                        </div>
+                        <div class="info-card">
+                            <h2>तालुका विमा कार्यालय</h2>
+                            <p>अधिकाऱ्याचे नाव: दिनेश</p>
+                            <p>संपर्क: 9876543215</p>
+                        </div>
+                        <div class="info-card">
+                            <h2>पत्वरी कार्यालय</h2>
+                            <p>अधिकाऱ्याचे नाव: मोहन</p>
+                            <p>संपर्क: 9876543216</p>
+                        </div>
+                       
+                         <div class="info-card">
+                            <h2>भूमी अभिलेख</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                          <div class="info-card">
+                            <h2>CSC Online Centre</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                         <div class="info-card">
+                            <h2>Computer Operator</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                      
+
+                    `;
+                    break;
+                case 4:
+                    info = `
+                        <div class="info-card">
+                            <h2>महावितरण चिखली</h2>
+                            <p>अधिकाऱ्याचे नाव: मोहन</p>
+                            <p>संपर्क: 9876543216</p>
+                        </div>
+                       
+                         <div class="info-card">
+                            <h2>सर्प मित्र</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                          <div class="info-card">
+                            <h2>अग्निशमन दल</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                         <div class="info-card">
+                            <h2>प्लंबर </h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                         <div class="info-card">
+                            <h2>Electrician </h2>
+                            <p>अधिकाऱ्याचे नाव: मोहन</p>
+                            <p>संपर्क: 9876543216</p>
+                        </div>
+                       
+                         <div class="info-card">
+                            <h2>Gas agency</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                          <div class="info-card">
+                            <h2>Post man</h2>
+                            
+                            <p>अधिकाऱ्याचे नाव: महेश</p>
+                            <p>संपर्क: 9876543213</p>
+                        </div>
+                        
+                    `;
+                    break;
+            }
+
+            document.getElementById('infoContainer').innerHTML = info;
+        }
+    </script>
+</body>
+</html>
